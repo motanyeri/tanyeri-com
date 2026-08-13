@@ -1,10 +1,235 @@
-# Tanyeri.com
+:root {
+  --navy: #06111d;
+  --navy-2: #0b1d2f;
+  --gold: #c8923a;
+  --cream: #f7f4ee;
+  --text: #18202a;
+  --muted: #6e7681;
+}
 
-Mehmet Oğuzhan Tanyeri kişisel web sitesi.
+* {
+  box-sizing: border-box;
+}
 
-## Yayınlama
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+}
 
-Bu repo Cloudflare Pages üzerinden statik site olarak yayınlanmak üzere hazırlanmıştır.
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-- Build command: boş bırakılabilir
-- Build output directory: `/`
+.hero {
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: linear-gradient(110deg, #030b13 0%, #071827 52%, #0b1f31 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.hero-text {
+  padding: 90px 58px 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  top: 34px;
+  left: 58px;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 38px;
+  letter-spacing: 0.06em;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  font-size: 13px;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 0.95;
+  margin: 0 0 24px;
+  font-weight: 500;
+}
+
+h1 span {
+  color: var(--gold);
+  display: block;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 16px;
+  margin: 0 0 28px;
+}
+
+.summary {
+  max-width: 620px;
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0 0 38px;
+}
+
+.summary strong {
+  color: var(--gold);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.actions a {
+  border: 1px solid var(--gold);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.hero-photo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 60px 48px 0 0;
+}
+
+.hero-photo img {
+  max-height: 590px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 54px 28px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  margin: 0 0 22px;
+  color: var(--navy);
+}
+
+.about p {
+  font-size: 21px;
+  line-height: 1.65;
+  max-width: 900px;
+}
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.timeline div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 26px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.timeline strong {
+  color: var(--gold);
+}
+
+.timeline span {
+  font-size: 18px;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.grid span,
+.plain-list li {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.footer {
+  max-width: 1180px;
+  margin: 34px auto;
+  padding: 36px;
+  background: linear-gradient(110deg, #030b13, #0b1d2f);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  border-radius: 10px;
+}
+
+.footer strong {
+  color: var(--gold);
+}
+
+.footer p {
+  margin-bottom: 0;
+  color: #d8dde5;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    padding: 100px 28px 36px;
+  }
+
+  .logo {
+    left: 28px;
+  }
+
+  .hero-photo {
+    padding: 0 24px;
+  }
+
+  .grid-section,
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline div {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
