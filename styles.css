@@ -39,23 +39,6 @@ a {
   justify-content: center;
 }
 
-.logo {
-  position: absolute;
-  top: 34px;
-  left: 58px;
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 38px;
-  letter-spacing: 0.06em;
-}
-
-.eyebrow {
-  color: var(--gold);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin: 0 0 18px;
-  font-size: 13px;
-}
 
 h1 {
   font-family: Georgia, "Times New Roman", serif;
@@ -215,10 +198,7 @@ h1 span {
     padding: 100px 28px 36px;
   }
 
-  .logo {
-    left: 28px;
-  }
-
+  
   .hero-photo {
     padding: 0 24px;
   }
